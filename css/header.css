@@ -1,0 +1,114 @@
+.side {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 6vw;
+    width: 270px;
+    line-height: 3.3em;
+    animation: opacity 0.5s 1;
+    animation-timing-function: ease-out;
+}
+.logo {
+    position: relative;
+    top: 0px;
+    left: -8px;
+    width: 270px;
+    height: auto;
+
+}
+.logo img {
+    width: 110%;
+}
+#headerwords {
+    display: block;
+    position: relative;
+    top: -6px;
+    left:12px;
+    font-size: 2.2rem;
+    letter-spacing: 5px;
+    font-weight: 300; 
+    color: white;
+    width: 97%;
+    margin: 0.7em auto;
+    text-align: center;
+    border: solid 2.3px #ffffff;
+}
+.sidemenu a{
+    line-height: 5px;
+    border-left:solid 5px transparent;
+    letter-spacing: 0.45rem;
+    font-size: 2.2rem;
+    line-height: 4.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.801);
+    position: relative;
+
+}
+.sidemenu a:hover{
+    color: white;
+}
+#headerwords:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+#social_icon a {
+    color: rgb(245, 245, 245);
+    font-size:2.4rem;
+    display: inline;
+    text-align: left;
+    margin: 0.7rem;
+    border: 0;
+}
+#social_icon a:hover {
+    color:white;
+}
+
+.countdown {
+    width: 47%;
+    margin-top: 30px;
+    text-align: center;
+
+}
+#countdownwords{
+    margin-left: 2px;
+    font-size: 2.5rem;
+    text-align: left
+}
+#signup {
+    margin-top: 14px;
+    display: block;
+    color:white;
+    text-align: center;
+    width: 95%;
+    font-size: 2.1rem;
+    letter-spacing: 0.2rem;
+    border-radius: 22spx;
+    border: 2.3px solid white;
+    font-weight: 300;
+}
+#signup:hover {
+    color:rgb(100, 100, 100) ;
+    background: white;
+    border: 3px solid white;
+}
+
+.countdown,.sidemenu{
+    margin-left:9px;
+}
+.section-0 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 20px;
+}
+.section-0 .content {
+    width: 100%;
+}
+.section-0 h1 {
+    letter-spacing: 4px;
+}
+@keyframes opacity{
+    0%{ opacity: 0;left:6vh;}
+    25%{opacity:0;}
+    75%{ opacity: 1;}
+
+}

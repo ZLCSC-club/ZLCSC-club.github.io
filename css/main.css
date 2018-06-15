@@ -1,0 +1,147 @@
+@import "./section-1.css";
+@import "./section-2.css";
+@import "./section-3.css";
+@import "./header.css";
+
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+
+/* Start reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font: inherit;
+    font-family: 'Noto Sans TC', sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{
+    text-decoration: none;
+    border: none;
+    background: none;
+}
+/* Basic layout */
+
+html {
+    font-size: 62.5%;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    box-sizing: border-box;
+
+    width: 100%;
+    background:linear-gradient( 273deg, rgba(28, 165, 206, 0.926) 3%,rgb(53, 102, 207)    100%);
+}
+h1 {
+    color: white;
+    font-size: 3.3rem;
+    line-height: 70px;
+    font-weight: 100;
+    margin-bottom:20px;
+}
+h2 {
+    color: white;
+    font-size: 2.7rem;
+    letter-spacing: 6px;
+    line-height: 50px;
+    font-weight: 200;
+}
+h4{
+    color: white;
+    font-size: 1.9rem;
+    letter-spacing: 2.5px;
+    line-height: 45px;
+    font-weight: 200;
+}
+p {
+    font-size: 1.8rem;
+    line-height: 40px;
+
+    color: white;
+    font-weight: 300;
+}
+.main {
+    display: grid;
+    grid-template-columns: 34% 53% 13%;
+    grid-template-rows: auto;  
+}
+.content { 
+    margin: 60px 0;
+}
+.icon {
+    text-decoration: none;
+}
+a,li{
+    text-decoration: none;
+}
+
+#ourgame{
+    position: fixed;
+    top:20px; 
+    right:30px;
+    display:flex;
+    align-items: center;
+    background: rgba(255, 255, 255,0.1);
+    border: 2px solid white;
+    padding:0 10px;
+    justify-content:center;
+    font-weight: 400
+
+
+}
+
+#ourgame a{
+    text-decoration: none;
+    color:white;
+    font-size:2rem;
+}
+
+#ourgame:hover{
+    background:white
+}
+#ourgame a:hover{
+    color: rgba(28, 165, 206, 0.926);
+} 
