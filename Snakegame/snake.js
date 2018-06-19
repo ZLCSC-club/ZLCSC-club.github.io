@@ -1,32 +1,23 @@
 const $ = (ele) => (document.querySelector(ele))
 
-var Vector = function (x, y) {
-  this.x = x || 0
-  this.y = y || 0
+class Vector {
+  constructor(x, y) {
+    this.x = x || 0
+    this.y = y || 0
+  }
+  add (value) {
+    return new Vector(this.x + value.x, this.y + value.y)
+  }
+  length () {
+    return Math.sqrt(Math.pow(this.x, 2), Math.pow(this.y, 2))
+  }
+  equal (value) {
+    return this.x === value.x && this.y === value.y
+  }
+  mul (value) {
+    return new Vector(this.x * value, this.y * value)
+  }
 }
-Vector.prototype.add = function (v) {
-  return new Vector(this.x + v.x, this.y + v.y)
-} //現在身上的x加上，外來向量的x//v為外來向量
-Vector.prototype.sub = function (v) {
-  return new Vector(this.x - v.x, this.y - v.y)
-} //現在身上的x減掉，外來向量的x
-Vector.prototype.length = function (v) {
-  return Math.sqrt(this.x * this.x + this.y * this.y)
-} //長度，畢氏定理//sqrt為開根號
-Vector.prototype.set = function (x, y) {
-  this.x = x
-  this.y = y
-  return x + y
-} //重設向量
-Vector.prototype.equal = function (v) {
-  return this.x == v.x && this.y == v.y
-} //是否相等
-Vector.prototype.mul = function (s) {
-  return new Vector(this.x * s, this.y * s)
-} //與傳入數相乘//s為純量（數字）
-Vector.prototype.clone = function () {
-  return new Vector(this.x, this.y)
-} //複製一個一樣的向量
 
 var Snake = function () {
   this.body = []
