@@ -39,39 +39,45 @@ class Vector {
   }
 }
 
-var Snake = function () {
-  this.body = []
-  this.maxLength = 5
-  this.head = new Vector()
-  this.speed = new Vector(1, 0)
-  this.direction = 'Right'
-}
-
-Snake.prototype.update = function () {
-  var newHead = this.head.add(this.speed)
-  this.body.push(this.head)
-  this.head = newHead
-  while (this.body.length > this.maxLength) {
-    this.body.shift()
+class Snake {
+  constructor (options = {}) {
+    this.options    = options
+    this.body       = options.body || new Array()
+    this.maxLength  = options.maxLength || 5
+    this.head       = new Vector()
+    this.speed      = new Vector(1, 0) || new Vector(options.speed, 0)
+    this.direction  = 'Right' || options.direction
   }
-}
-
-Snake.prototype.setDirection = function (dir) {
-  var target
-  if (dir == 'Up') {
-    target = new Vector(0, -1)
+  update () {
+    this.body.push(this.head)
+    this.head = this.head.add(this.speed)
+    if (this.body.length > this.maxLength) this.body.splice(0, this.body.length - this.maxLength)
   }
-  if (dir == 'Right') {
-    target = new Vector(1, 0)
+  setDirection (arrow) {
+    let target
+    const speed = (this.options.speed || 1)
+    switch (arrow) {
+      case 'Up':
+        target = new Vector(0, -speed)
+        break
+      case 'Right':
+        target = new Vector(speed, 0)
+        break
+      case 'Left':
+        target = new Vector(-speed, 0)
+        break
+      case 'Down':
+        target = new Vector(0, speed)
+        break
+    }
+    if (!target.equal(this.speed.mul(-1))) {
+      this.speed = target
+    }
   }
-  if (dir == 'Left') {
-    target = new Vector(-1, 0)
-  }
-  if (dir == 'Down') {
-    target = new Vector(0, 1)
-  }
-  if (target.equal(this.speed.mul(-1)) == false) {
-    this.speed = target
+  checkBoundary (gameWidth) {
+    let xInRange = 0 <= this.head.x && this.head.x < gameWidth
+    let yInRange = 0 <= this.head.y && this.head.y < gameWidth
+    return xInRange && yInRange
   }
 }
 
@@ -85,12 +91,6 @@ var Game = function () {
   this.init()
   this.start = false
   this.generateFood()
-}
-
-Snake.prototype.checkBoundary = function (gameWidth) {
-  let xInRange = 0 <= this.head.x && this.head.x < gameWidth
-  let yInRange = 0 <= this.head.y && this.head.y < gameWidth
-  return xInRange && yInRange
 }
 
 Game.prototype.init = function () {
