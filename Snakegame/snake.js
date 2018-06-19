@@ -221,5 +221,5 @@ Game.prototype.update = function () {
 var game = new Game()
 
 window.addEventListener('keydown', (event) => {
-  game.snake.setDirection(event.key.replace('Arrow', ''))
+  if (event.key.indexOf('Arrow') > -1) game.snake.setDirection(event.key.replace('Arrow', ''))
 })
