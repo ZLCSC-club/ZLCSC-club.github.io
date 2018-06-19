@@ -1,19 +1,39 @@
 const $ = (ele) => (document.querySelector(ele))
 
 class Vector {
+  /**
+   * Create a vector.
+   * @param {Number} x - the x-axis value.
+   * @param {Number} y - the y-axis value.
+   */
   constructor(x, y) {
     this.x = x || 0
     this.y = y || 0
   }
+  /**
+   * Vector addition
+   * @param {Object<x: Number, y: Number>} value - argument with x-y values.
+   */
   add (value) {
     return new Vector(this.x + value.x, this.y + value.y)
   }
+  /**
+   * Vector length
+   */
   length () {
     return Math.sqrt(Math.pow(this.x, 2), Math.pow(this.y, 2))
   }
+  /**
+   * Compare vector
+   * @param {Object<x: Number, y: Number>} value - argument with x-y values.
+   */
   equal (value) {
     return this.x === value.x && this.y === value.y
   }
+  /**
+   * Compare vector
+   * @param {Number} value - argument
+   */
   mul (value) {
     return new Vector(this.x * value, this.y * value)
   }
