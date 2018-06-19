@@ -182,7 +182,6 @@ Game.prototype.playSound = function (note, volume, when) {
     var synth = new Tone.Synth().toMaster()
     synth.volume = volume || -12
     synth.triggerAttackRelease(note, '8n')
-    console.log('a')
   }, when || 0)
 }
 
