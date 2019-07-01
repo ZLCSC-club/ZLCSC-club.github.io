@@ -1,320 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/main.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <title>中崙資研 ZLCSC</title>
-    <link rel="icon" href="./img/iconcolor.gif">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>中崙資研ZLCSC</title>
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100&display=swap&subset=chinese-traditional" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
-    <h2 id="ourgame"><a  href='./Snakegame/snake.html'>貪食蛇～</a></h2>
-
-    <div class="side">
-        <div class="logo">
-            <a href="./"><img src="./img/ZLCSC.png"/></a>
-            <a href="./"><div id="headerwords">中崙高中資訊研習社</div></a>
-        </div>
-        <ul class="sidemenu">
-            <li><a href='#gettoknowus'>認識我們</a></li>
-            <li><a href='#teach'>專案介紹</a></li>
-            <li><a href='#people'>社團成員</a></li>
-            <li><a href='#teacher'>講師介紹</a></li>
-            <li><a href='#friend'>特別感謝</a></li>
-
-            <div id="social_icon">
-                <a href="https://github.com/ZLCSC-club"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/ZLCSC109/"><i class="fab fa-facebook-f"></i></a>
-<!--                <a href=""><i class="fab fa-youtube"></i></a>-->
-            </div>
+  <section class="sidebar">
+    <div class="club_symbol">
+      <a href="index.html"><img class="club_logo" src="img/ZLCSC.png" alt="ZLCSC" /></a>
+      <a href="index.html"><div class="square_title">中崙高中資訊研習社</div></a>
+    </div>
+    <a class="navbuttons" href='#about_us'>認識我們</a>
+    <a class="navbuttons" href='#projects'>專案介紹</a>
+    <a class="navbuttons" href='#members'>社團成員</a>
+    <a class="navbuttons" href='#teachers'>講師介紹</a>
+    <div class="socialbuttons">
+      <a href="https://github.com/ZLCSC-club/ZLCSC-club.github.io"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/ZLCSC109"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://discord.gg/H6xZeXa"><i class="fab fa-discord"></i></a>
+    </div>
+    <a class="navbuttons" href='Snakegame/snake.html'>🐍</a>
+  </section>
+  <section class="content">
+    <div id="intro">
+      <h1>
+      中崙資研<br />
+      一群熱愛資訊的高中生<br />
+      組成的社團
+      </h1>
+      <h1 id="intro_decoration">&lt;<span id="underline">_</span>/&gt;</h1>
+    </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <div class="slides">
+          <h2>目前無活動!</h2>
+          <h2></h2>
+          <h2></h2>
+          <h2></h2>
+      </div>
+      <div class="slides">
+          <h2>關注以獲得更多資訊!</h2>
+          <h2></h2>
+          <h2></h2>
+          <h2></h2>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div id="about_us">
+      <h1>我們是誰</h1>
+      <p>
+        在這個社團，我們找到了一群和我們一樣喜歡創造，一樣喜歡程式的人。
+        在這個資訊爆炸的時代，能用程式解決問題，創造出我們想像的網站、程式，是讓我們很興奮的，
+        而我們很高興可以向大家展示我們的成果。
+      </p>
+    </div>
+    <div>
+      <h1>電資大家庭</h1>
+      <p>
+        我們是高中電資圈的一份子，除了舉辦迎新外，我們也和其他校舉辦聯課、寒訓和社遊。
+        除此之外，各校舉辦的交接茶會，也是一年中相當精彩、重要的活動。
+        而我們也積極參與SITCON等各種資訊年會，以提升自己的學術能力，向更多人介紹資訊這個領域。
+      </p>
+    </div>
+    <div id="projects">
+      <h1>社團網站更新</h1>
+      <p>
+        過去我們的社團網站，是套HTML5UP的模板做出來的。
+        我們希望可以一起完成新的社團網站的設計、Coding和架設。
+        這是我們最重要的目標 -完成我們社團網站。我們也找到了指導老師白羊，
+        他很支持我們翻新社團網站的計畫，也能給我們系統化的網頁課程。
+        於是，翻新社團網站的計畫便確定了。
+      </p>
+    </div>
+    <div id="members" class="sublist">
+      <div>  <!-- placeholder -->
+        <h1>社團成員</h1>
+        <h2>17th 社長/公關 陳彥宇</h2>
+        <h2>17th 副社/設備 劉冠希</h2>
+        <h2>17th 活動/設備 李帛勳</h2>
+        <h2>17th 教學 鄒政傑</h2>
+        <h2>17th 美宣 廖珮晴</h2>
+        <h2>17th 文書 陳冠勳</h2>
+        <h2>17th 總務 張汶均</h2>
+      </div>  <!-- placeholder -->
+    </div>
+    <div id="teachers" class="sublist">
+      <div>
+        <h1>講師介紹</h1>
+        <h2>講師 王文岳 <a href="https://www.facebook.com/allen.wang.1675"><i class="fab fa-facebook-f"></i></a></h2>
+        <ul>
+          <li>大安高工電腦研究社客座講師</li>
+          <li>李梅樹紀念館資訊組召集人</li>
         </ul>
-<!--
-        <div class="countdown">
-            <h2 id="countdownwords">茶會倒數<br>30天</h2>
-           <a href="" ><div id="signup">點我報名</div></a>
-        </div>
--->
+        <p>
+          本社硬體課程由講師王文岳來教學，深入淺出地介紹硬體知識。<br />
+          研究電腦硬體相關知識達三年以上，擅長硬體規劃與解決方案提供，
+          研究方向為電腦硬體市場變革、硬體歷史相關知識與硬體架構，
+          於高中職電資社團講習時間已達兩年以上，
+          在台灣硬體論壇也有數篇硬體相關著作。
+        </p>
+      </div>
+      <div>
+        <h2>講師 王群皓 <a href="https://www.facebook.com/aries0d0f"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://github.com/Aries0d0f"><i class="fab fa-github"></i></a></h2>
+        <ul>
+          <li>李梅樹紀念館資訊組 RD</li>
+          <li>全端工程師</li>
+        </ul>
+        <p>
+          本社的網頁課程講師，也是我們的寒訓講師，協助我們的社團網站更新，並為我們的社團提供了很多建議。<br />
+          精熟網頁前後端設計。至今已有網頁前端開發及設計約兩年經驗， 並領有由中華民國勞動部認證之硬體裝修丙級技術證照，
+          且參加許多相關社群(如：SITCON及台灣摩茲基金會)，積極參與黑客松。
+          目前正在進行李梅樹紀念館網站開發。
+        </p>
+      </div>
+      <div>
+        <h2>講師 賴其旻 <a href="https://www.facebook.com/mark.gremlins?lst=100011502608819%3A100013613620040%3A1527330761"><i class="fab fa-facebook-f"></i></a></h2>
+        <ul>
+          <li>致理科技大學資管系學生</li>
+          <li>曾擔任大安高工電腦研究社活動長</li>
+          <li>協助李梅樹紀念館舉辦維基百科寫作工作坊</li>
+        </ul>
+        <p>
+          指導老師賴其旻，也在社團經營上，給予我們相當多的建議。
+          曾任大安高工電腦研究社活動長，因此也對活動安排、社團領導與高中電資圈頗為熟悉。
+        </p>
+      </div>
     </div>
-
-    <div class="main">
-        <div class="section-0">
-<!--        <img src="./img/withpeople.jpg" width="100%" style="margin-top:70px" > -->
-            <div id="us" class="content">
-                <div class="left">
-                    <h1 id="bigtitle">中崙資研<br/>
-                    一群熱愛資訊的高中生<br/>
-                    組成的社團<br/>
-                    </h1>
-                </div>
-                <div class="codeimg-right">&lt;<span id="underline">_</span>/&gt;</div>
-            </div>
-            <div id="gettoknowus"class="content">
-            <h1>我們是誰</h1>
-                <h4>在這個社團，我們找到了一群和我們一樣喜歡創造，一樣喜歡程式的人。在這個資訊爆炸的時代，能用程式解決問題，創造出我們想像的網站、程式，是讓我們很興奮的，而我們很高興可以向大家展示我們的成果。</h4>
-            </div>
-            <div class="content">
-                <h1>電資大家庭</h1>
-                <h4>我們是高中電資圈的一份子，除了舉辦迎新外，我們也和其他校舉辦聯課、寒訓和社遊。
-                    除此之外，各校舉辦的交接茶會，也是一年中相當精彩、重要的活動。
-                    而我們也積極參與SITCON等各種資訊年會，以提升自己的學術能力，向更多人介紹資訊這個領域。
-                </h4>
-            </div>
-            <div id="activities" class="content">
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-                    <div class="slides fade">
-                        <div class="slide-text">
-                            <h2>目前無活動! </h2>
-                            <h2> </h2>
-                            <h2></h2>
-                            <h2></h2>
-                        </div>
-                    </div>
-                    <div class="slides fade">
-                        <div class="slide-text">
-                            <h2>關注以獲得更多資訊!</h2>
-                            <h2></h2>
-                            <h2></h2>
-                            <h2></h2>
-                        </div>
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-        </div>
-        <div class="section-1">
-            <div id="teach" class="content">
-                <h1 >2017年，我們做了什麼？</h1>
-                <h4>這一年，我們最重要的目標，是做我們的專案。<br>
-                我們有兩個重要的社團專案，一個是更新、架設我們的社團網站，另一個則是遊戲設計。過去的社團網站，是套 HTML5UP的模板製作出來的，並沒有自己的設計。這一年，我們希望可以從網站的設計、Coding，到最後架設網站，全部由我們高一、高二一同完成。而我們有兩個遊戲的專案，一個是由高二製作的貪食蛇遊戲，這是一個用 Javascript撰寫的網頁遊戲，製作這個 project是很好玩的，但也遇到不少程式上的挑戰。另一個是計畫為期一年的 RPG 遊戲專案，目前正在努力的將劇本用 RPG maker做成實際的遊戲，期待我們半年後的成果吧！</h4>
-            </div>
-            <div id="teach" class="content">
-                <h1 >社團網站更新</h1>
-                <h4>過去我們的社團網站，是套HTML5UP的模板做出來的。這一年，我們希望可以一起完成新的社團網站的設計、Coding和架設。這是我們這一年最重要的目標 -完成我們社團網站。我們也找到了指導
-                老師白羊，他很支持我們翻新社團
-                網站的計畫，也能給我們系統化的網頁課程。於是，翻新社團網站的計畫便確定了。
-                </h4>
-            </div>
-            <div class="content">
-                <h1>RPG 遊戲製作</h1>
-                <h4>  RPG遊戲專案處於開發中的階段，而這是一個很花時間的專案。從劇本的設計、遊戲視覺的設計和繪製、 RPG maker的應用，都需要各方的分工，才能完成。<br>
-                我們將 RPG遊戲團隊分成三組，分別為劇情組、 RPG maker（實作組）、圖組，這將是個為期一年的 Project，我們將把目前完成的劇本和 RPG maker做出來的遊戲片段交接給學弟妹。期待他們之後的作品！</h4>
-            </div>
-
-
-
-        </div>
-        <div class="section-2">
-            <div class="content">
-            </div>
-
-            <div class="inside">
-                <div id="people" class="content">
-                    <h1 class="peoplename">16th 社長 邱俊喆&nbsp&nbsp
-                        <a href="https://www.facebook.com/applebearsnowman" class="icon"><i class="fab fa-facebook-f"></i></a>&nbsp
-                        <a href="https://github.com/pig861219" class="icon"><i class="fab fa-github"></i></a>
-                        <a href="https://steamcommunity.com/id/bearapple/" class="icon"><i class="fab fa-steam"></i></a>
-                    </h1>
-                    <br>
-                    <h4>小學時在社團有碰過scratch，算是在那時候有了對程式的興趣，也有了點程式的邏輯。本身對資訊這方面也很有興趣，所以最後就選擇了這個社團加入。</br>目前有一點HTML跟CSS的基礎，也有選修C語言。希望能在新的一年用社長的能力讓這個社團變得更好。</br>興趣就是很愛看動畫，也歡迎來跟我討論~~
-                    </h4>
-                </div>
-                <div class="content">
-                    <h1 class="peoplename">16th 副社/總務 陳柏諺&nbsp&nbsp
-
-                    </h1>
-                    <br>
-                    <h4>我是陳柏諺，我擔任的幹部是副社長和總務，我會加入資研社是因為我想從中學習一些程式語言和相關的知識，也希望能用學到的這些知識做出個人工智慧。在這個社團當中，我學了如何網頁設計，讓我收穫很多，而且我們也做出自己的社網。未來我希望能為社團進一份心力，也將社團中的事務處理的好。
-                    </h4>
-                </div>
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">16th 教學/文書 林頎桓&nbsp&nbsp
-
-                    </h1>
-                    <br>
-                    <h4>從國小開始，我就很喜歡接觸電子產品，好奇到每一件電子產品都想拆開來看看裡面長怎樣、是怎麼運作的。後來國中自已也組了一台電腦，從買材料到軟體安裝都是一個人包辦。多虧了網路，我開始自學程式語言，對電腦軟體工程，尤其是遊戲類，產生了濃厚的興趣，加入資研以後，給了我一個發揮及成長的機會。
-                    </h4>
-                </div>
-            <div class="content">
-                    <h1 class="peoplename">16th 活動 鄒采臻&nbsp&nbsp
-
-                    </h1>
-                    <br>
-                    <h4>我是資研社百九的活動，學過python，一開始加入這個社團有一部分是因為未來趨勢的緣故，還有一部分是對人工智慧和電腦組裝有興趣，希望在接下來的時間也可以加強自己在程式語言和電腦組裝方面的能力。
-                    </h4>
-                </div>
-
-            </div>
-            <div class="inside">
-              <div class="content">
-                    <h1 class="peoplename">16th 美宣 黃姿菱&nbsp&nbsp
-
-                    </h1>
-                    <br>
-                    <h4>哈囉，我的名字叫做黃姿菱， 擔任社團美宣一職位， 雖然目前還不是很會畫畫， 不過我會盡力把自己的本分做好的， 興趣是玩遊戲， 時代在進步，運用電腦的時間也變多了， 所以當初加入這個社團是因為想要學有關電腦的東西，來充實自己的知識， 希望未來的一學期能夠在社團中學到更有趣、 實用的知識。
-                    </h4>
-              </div>
-              <div class="content">
-                    <h1 class="peoplename">16th 資設 程采婕&nbsp&nbsp
-
-                    </h1>
-                    <br>
-                    <h4> Hello 我是中崙百九資研社的設備股長，學過python和C語言，希望我能在資研社學到更多資訊相關知識，使我的高中社團生活更加充實，且擁有美好回億。
-                    </h4>
-                  </div>
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">16th 資設 溫柏融&nbsp&nbsp</h1>
-                    <br>
-                    <h4>我之所以會加入資研，是因為我從小就對資訊相關的一切事物極度有興趣，特別是程式語言的部分，從我第一次接觸電腦以來，我就一直很想學習各式各樣的程式語言，因為我相信這對我的未來必定會有極大的幫助，而在如此繁多的程式語言之中我最想學習的就是c++了，雖然c++學習起來似乎十分困難，但我相信如果學會了，必會是一大成就，由於以上的原因，所以我加入了資研。
-                    </h4>
-                </div>
-
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">17th 社長/公關 陳彥宇&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-            <div class="content">
-                    <h1 class="peoplename">17th 副社/設備 劉冠希&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">17th 活動/設備 李帛勳&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-            <div class="content">
-                    <h1 class="peoplename">17th 教學 鄒政傑&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">17th 美宣 廖珮晴&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-            <div class="content">
-                    <h1 class="peoplename">17th 文書 陳冠勳&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-
-            </div>
-            <div class="inside">
-                <div class="content">
-                    <h1 class="peoplename">17th 總務 張汶均&nbsp&nbsp</h1>
-                    <br>
-                    <h4></h4>
-                </div>
-            </div>
-        <div class="section-3">
-            <div id="teacher" class="content">
-                <h1 class="peoplename">講師 王文岳&nbsp&nbsp<!--暫時以空白鍵排版 -->
-                    <a href="https://www.facebook.com/allen.wang.1675" class="icon"><i class="fab fa-facebook-f"></i></a>
-                </h1>
-                <br>
-                <div class="teacher">
-                <ul>
-                    <li>大安高工電腦研究社客座講師</li>
-                    <li>李梅樹紀念館資訊組召集人</li>
-                </ul>
-                </div>
-                <br>
-                <div class="teacher">
-
-                    <h4>
-                    本社硬體課程由講師王文岳來教學，深入淺出地介紹硬體知識。
-                    <br>
-                    研究電腦硬體相關知識達三年以上，擅長硬體規劃與解決方案提供，
-                    研究方向為電腦硬體市場變革、硬體歷史相關知識與硬體架構，
-                    於高中職電資社團講習時間已達兩年以上，在台灣硬體論壇也有數篇硬體相關著作。
-                    </h4>
-                </div>
-            </div>
-            <div class="content">
-                <h1 class="peoplename">講師 王群皓&nbsp&nbsp<!--暫時以空白鍵排版 -->
-                    <a href="https://www.facebook.com/aries0d0f" class="icon"><i class="fab fa-facebook-f"></i></a>&nbsp
-                    <a href="https://github.com/Aries0d0f" class="icon"><i class="fab fa-github"></i></a>
-                </h1>
-                <br>
-                <div class="teacher">
-                <ul>
-                    <li>李梅樹紀念館資訊組 RD</li>
-                    <li>全端工程師</li>
-                </ul>
-                </div>
-                <br>
-                <div class="teacher">
-
-                    <h4>
-                    本社的網頁課程講師，也是我們的寒訓講師，協助我們的社團網站更新，並為我們的社團提供了很多建議。<br>
-                    精熟網頁前後端設計。至今已有網頁前端開發及設計約兩年經驗，
-                    並領有由中華民國勞動部認證之硬體裝修丙級技術證照，
-                    且參加許多相關社群(如：SITCON及台灣摩茲基金會)，積極參與黑客松。
-                    目前正在進行李梅樹紀念館網站開發。
-                    </h4>
-                </div>
-            <div class="content">
-                    <h1 class="peoplename">講師 賴其旻&nbsp&nbsp
-                        <a href="https://www.facebook.com/mark.gremlins?lst=100011502608819%3A100013613620040%3A1527330761" class="icon"><i class="fab fa-facebook-f"></i></a>
-                    </h1>
-                <div class="teacher">
-                    <ul>
-                        <li>致理科技大學資管系學生</li>
-                        <li>曾擔任大安高工電腦研究社活動長</li>
-                        <li>協助李梅樹紀念館舉辦維基百科寫作工作坊</li>
-                    </ul>
-                </div>
-                <br><br>
-                <div class="teacher">
-                    <h4>指導老師賴其旻，也在社團經營上，給予我們相當多的建議。
-                        曾任大安高工電腦研究社活動長，因此也對活動安排、社團領導與高中電資圈頗為熟悉。
-                    </h4>
-                </div>
-            </div>
-            <div id="friend" class="content">
-                <h1>友社名單</h1>
-                <div class="friend">
-                    <div class="left">
-                        <ul>
-                            <li><a href="https://www.facebook.com/ssinrc/">SSINRC 松山資研</a></li>
-                            <li><a href="https://www.facebook.com/建中電研35th-482303981921779/?fref=ts">CKEISC 建中電研</a></li>
-                            <li><a href="https://www.facebook.com/infor31st/">INFOR 建中資訊社</a></li>
-                            <li><a href="https://www.facebook.com/zsisc25/">ZSISC 中山女高資研社</a></li>
-                            <li><a href="https://www.facebook.com/HSNUCNMC20/">HSNUCNMC 師大附中網管社</a></li>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <ul>
-                            <li><a href="https://www.facebook.com/fgisc/">FGISC 北一女中資訊研習社</a></li>
-                            <li><a href="https://www.facebook.com/DaanCSC/">DACSC 大安高工電腦研究社</a></li>
-                            <li><a href="https://www.facebook.com/HPSHCP/">HPSHCP 和平高中程式研究社</a></li>
-                            <li><a href="https://www.facebook.com/HSNU.CRC/">HSNUCRC 師大附中電算社</a></li>
-                            <li><a href="https://csdc.tw">CSDC 竹嶺軟研</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            <div id="bubble1" class="bubble x1"></div>
-
-    <script src="./main.js"></script>
+  </section>
+  <script src="main.js"></script>
 </body>
 </html>

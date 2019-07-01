@@ -1,147 +1,173 @@
-@import "./section-1.css";
-@import "./section-2.css";
-@import "./section-3.css";
-@import "./header.css";
-
-@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
-
-/* Start reset css */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-    font: inherit;
-    font-family: 'Noto Sans TC', sans-serif;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-    line-height: 1;
-    overflow-x: hidden;
-    
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-button{
-    text-decoration: none;
-    border: none;
-    background: none;
-}
-/* Basic layout */
+@charset "UTF-8";
 
 html {
-    font-size: 62.5%;
+  font-size: 100%;
+  font-family: 'Noto Sans TC', sans-serif;
 }
 *, *::before, *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+a:hover {
+  color: white;
 }
 body {
-    box-sizing: border-box;
-
-    width: 100%;
-    background:linear-gradient( 273deg, rgba(28, 165, 206, 0.926) 3%,rgb(53, 102, 207)    100%);
+  display: grid;
+  max-width: 1500px;
+  grid-template-areas: "sidebar""content";
+  margin: 80px 20px 80px 20px;
+  background: linear-gradient(273deg, #1ca5ce, #3566cf);
+  color: white;
+  letter-spacing: 2px;
+}
+.sidebar {
+  margin: auto;
+}
+.navbuttons {
+  display: none;
+}
+.club_logo {
+  width: 297px;
+}
+.content {
+  grid-area: content;
+  display: grid;
+  grid-row-gap: 80px;
 }
 h1 {
-    color: white;
-    font-size: 3.3rem;
-    line-height: 70px;
-    font-weight: 100;
-    margin-bottom:20px;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  line-height: 5rem;
+  margin-bottom: 15px;
 }
 h2 {
-    color: white;
-    font-size: 2.7rem;
-    letter-spacing: 6px;
-    line-height: 50px;
-    font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
-h4{
+ul {
+  font-size: 1.2rem;
+  line-height: 40px;
+  font-style: italic;
+  list-style-type: circle;
+  margin: 20px 0 20px 0;
+  padding-left: 1.2rem;
+}
+#underline{
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%   {opacity: 0;}
+    50%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+.slideshow-container{
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 100px auto 100px auto;
+}
+.slides {
+    display: none;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 0.6s;
+    animation-name: fade;
+    animation-duration: 0.6s;
+}
+@-webkit-keyframes fade {
+  from {opacity: 0.2}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.2}
+  to {opacity: 1}
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -40px;
+    padding: 15px;
     color: white;
-    font-size: 1.9rem;
-    letter-spacing: 2.5px;
-    line-height: 45px;
-    font-weight: 200;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+.square_title {
+  border: solid 2px #ffffff;
+  padding: 5px;
+  margin: 0 14px 0 14px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: white;
+}
+.socialbuttons {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px;
+  letter-spacing: 50px;
 }
 p {
-    font-size: 1.8rem;
-    line-height: 40px;
-
-    color: white;
-    font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 45px;
 }
-.main {
-    display: grid;
-    grid-template-columns: 34% 53% 13%;
-    grid-template-rows: auto;  
+#intro {
+  display:flex;
+  width: 100%;
+  margin: 100px auto 0 auto;
+  flex-direction: column;
+  align-items: center;
 }
-.content { 
-    margin: 60px 0;
+#intro_decoration {
+  font-size: 7rem;
+  line-height: 10rem;
 }
-.icon {
-    text-decoration: none;
+.sublist {
+  display: grid;
+  grid-row-gap: 80px;
 }
-a,li{
-    text-decoration: none;
-}
-
-#ourgame{
+@media(min-width:1000px) {
+  body {
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 400px auto;
+    margin: 80px auto 80px auto;
+    padding: 0 30px 0 30px;
+  }
+  .sidebar {
+    grid-area: sidebar;
     position: fixed;
-    top:20px; 
-    right:30px;
-    display:flex;
-    align-items: center;
-    background: rgba(255, 255, 255,0.1);
-    border: 2px solid white;
-    padding:0 10px;
-    justify-content:center;
-    font-weight: 400
-
-
+    display: grid;
+    grid-row-gap: 25px;
+  }
+  .navbuttons {
+    display: block;
+    padding-left: 12px;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+  }
+  .socialbuttons {
+    text-align: left;
+    padding-left: 12px;
+    margin: 0;
+    letter-spacing: 16px;
+  }
+  #intro {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
-
-#ourgame a{
-    text-decoration: none;
-    color:white;
-    font-size:2rem;
-}
-
-#ourgame:hover{
-    background:white
-}
-#ourgame a:hover{
-    color: rgba(28, 165, 206, 0.926);
-} 
