@@ -106,9 +106,24 @@ class Game {
     this.snake = new Snake()
     $('#gameover').innerText = ''
     $('#gameoverscore').innerText = ''
+    $('#start').style.display = 'none'
+    $('#pause').style.display = 'inherit'
+  }
+  pause () {
+    this.isStart = false
+    $('#pause').style.display = 'none'
+    $('#continue').style.display = 'inherit'
+  }
+  continue () {
+    this.isStart = true
+    $('#continue').style.display = 'none'
+    $('#pause').style.display = 'inherit'
   }
   end () {
     this.isStart = false
+    $('#start').style.display = 'inherit'
+    $('#pause').style.display = 'none'
+    $('#continue').style.display = 'none'
     $('h2').innerText = '分數' + (this.snake.maxLength - 5) * 10
   }
   getPosition (x, y) {
@@ -184,17 +199,17 @@ class Game {
         if (this.snake.head.equal(bp)) {
           this.end()
           $('#gameover').innerText = 'Game Over'
-          $('#gameoverscore').innerText = '分數:' + (this.snake.maxLength - 5) * 10
+          $('#gameoverscore').innerText = 'score: ' + (this.snake.maxLength - 5) * 10
         }
       })
       if (this.snake.checkBoundary(this.gameWidth) == false) {
         this.end()
-  
+
         $('#gameover').innerText = 'Game Over'
-        $('#gameoverscore').innerText = 'score:' + (this.snake.maxLength - 5) * 10
-  
+        $('#gameoverscore').innerText = 'score: ' + (this.snake.maxLength - 5) * 10
+
       }
-      $('.lefttop h2').innerText = 'score:' + (this.snake.maxLength - 5) * 10
+      $('#score').innerText = '分數: ' + (this.snake.maxLength - 5) * 10
     }
     setTimeout(() => {
       this.update()

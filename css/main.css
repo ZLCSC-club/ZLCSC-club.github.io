@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "reset.css";
 
 html {
   font-size: 100%;
@@ -24,12 +25,13 @@ body {
   letter-spacing: 2px;
 }
 .sidebar {
+  display: grid;
   margin: auto;
 }
 .navbuttons {
   display: none;
 }
-.club_logo {
+.club_symbol {
   width: 297px;
 }
 .content {
@@ -151,7 +153,6 @@ p {
   .sidebar {
     grid-area: sidebar;
     position: fixed;
-    display: grid;
     grid-row-gap: 25px;
   }
   .navbuttons {

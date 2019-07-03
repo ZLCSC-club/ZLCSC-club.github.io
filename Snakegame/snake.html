@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./snake.css">
-    <script src="./tone.js"></script>
-    <title>中崙資研 ZLCSC 貪食蛇！</title>
-    <link rel="icon" href="./img/iconcolor.gif">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>中崙資研ZLCSC 貪食蛇！</title>
+  <link rel="icon" href="../img/icon.png">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="snake.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100&display=swap&subset=chinese-traditional" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="tone.js"></script>
 </head>
 <body>
-    <div class="lefttop">
-        <div class="logo">
-            <a href="../index.html"><img src="./img/ZLCSC.png"/></a>
-            <a href="../index.html"><div id="headerwords">中崙高中資訊研究社</div></a>
-        </div>
-        <h2 id="score">score:0</h2>
-
-        <button onclick="game.start()">開始遊戲</button>
+  <section class="sidebar">
+    <div>
+      <a href="../index.html"><img class="club_symbol" src="../img/ZLCSC.png" alt="ZLCSC" /></a>
+      <a href="../index.html"><div class="square_title">中崙高中資訊研習社</div></a>
     </div>
-
-    <div class="game">
-        <h2 id="gameover"></h2>
-        <h2 id="gameoverscore"></h2>
-
-        <canvas id="mycanvas"></canvas>
+    <div class="socialbuttons">
+      <a href="https://github.com/ZLCSC-club/ZLCSC-club.github.io"><i class="fab fa-github"></i></a>
+      <a href="https://www.facebook.com/ZLCSC109"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://discord.gg/H6xZeXa"><i class="fab fa-discord"></i></a>
     </div>
+    <h1 id="score" class="square_title">分數: 0</h1>
+    <button onclick="game.start()" id="start">開始遊戲</button>
+    <button onclick="game.pause()" id="pause">暫停</button>
+    <button onclick="game.continue()" id="continue">繼續</button>
+  </section>
+  <section class="content game">
+    <h2 id="gameover"></h2>
+    <h2 id="gameoverscore"></h2>
+    <canvas id="mycanvas"></canvas>
+  </section>
 </body>
-    <script src="./snake.js"></script>
+<script src="snake.js"></script>
 </html>

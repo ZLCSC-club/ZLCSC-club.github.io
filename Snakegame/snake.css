@@ -1,102 +1,55 @@
-@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
-
-html, body {
-
-  height: 100%;
-  margin: 0;
-  font-family: courier;
-  letter-spacing: 3px;
-  background:linear-gradient( 273deg, rgba(28, 165, 206, 0.926) 3%,rgb(53, 102, 207)    100%);
-
-}
-.game{
-  height:100%;
-  width:80%;
-  float:right;
+.game {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
 }
-canvas {
-  max-width: 100%;
+.socialbuttons {
+  padding: 0;
+  text-align: center;
 }
-
 button {
-  font-family: courier;
-  background-color: transparent;
+  background: rgba(0, 0, 0, 0);
+  border: solid 2px #ffffff;
+  padding: 5px;
+  margin: 0 14px 0 14px;
+  text-align: center;
+  letter-spacing: 5px;
   color: white;
-  padding: 10px;
   cursor: pointer;
-  outline: none;
-  font-size: 20px;
-  border: 2px solid white;
-
-  font-size: 30px
+  font-size: 30px;
+  transition: 0.6s ease;
 }
 button:hover {
   background-color: white;
   color: grey;
 }
-
-
-.lefttop {
-  position: fixed;
-  top: 70px;
-  left: 80px;
-  color: white;
-  width:270px;
-  font-size: 25px;
-
+#pause, #continue {
+  display: none;
 }
-
-.lefttop img {
-  width:105%
-}
-
-#headerwords {
-  width: 83%;
-  height:2rem;
-  display: block;
-  padding: 0.7rem 0.7rem 0rem;
-
-  font-size: 1.2rem;
-  font-weight: 400;
-  border: 2px solid ;
-  letter-spacing: 5px;
-  color: white;
-  margin:30px 10px ;
-  text-align: center;
-}
-a{
-  text-decoration: none
-}
-#score,button{
-  margin-left:15px;
-  margin-top:40px;
-}
-.description{
-  margin-top:50px;
-  font-size:1.7rem
-}
-
-.game{
-  display:flex;
-  align-items: center;
-justify-content:center
-}
-#gameover{
-position: fixed;;
-font-size: 4rem;
-color:rgb(104, 104, 104);
-width: auto;
-height:4.5rem;
-top: 260px
-}
-#gameoverscore{
-  position: fixed;;
+#gameover {
+  position: absolute;
   font-size: 4rem;
-  color:rgb(104, 104, 104);
+  color: black;
   width: auto;
-  height:4.5rem;
-  top: 350px
+  height: 4.5rem;
+  bottom: 100px;
+}
+#gameoverscore {
+  position: absolute;
+  font-size: 4rem;
+  color: black;
+  width: auto;
+  height: 4.5rem;
+  botoom: 0;
+}
+@media(min-width:1000px) {
+  #gameover {
+    top: 300px;
+  }
+  #gameoverscore {
+    top: 400px;
+  }
 }
