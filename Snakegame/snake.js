@@ -174,8 +174,8 @@ class Game {
     let y = parseInt(Math.random() * this.gameWidth)
     this.food.push(new Vector(x, y))
     this.drawEffect(x, y)
-    this.playSound('E5', 1)
-    this.playSound('A5', 10, 200)
+    this.playSound('E5', -10)
+    this.playSound('A5', -10, 200)
   }
   playSound (note, volume, when = 0) {
     setTimeout(() => {
@@ -219,6 +219,16 @@ class Game {
 
 var game = new Game()
 
+var isPressed = false;
 window.addEventListener('keydown', (event) => {
   if (event.key.indexOf('Arrow') > -1) game.snake.setDirection(event.key.replace('Arrow', ''))
+  if (event.code == 'Space' && !isPressed) {
+    if (game.isStart) game.pause()
+    else game.continue()
+
+    isPressed = true;
+  }
+})
+window.addEventListener('keyup', (event) => {
+  if (event.code == 'Space') isPressed = false;
 })
