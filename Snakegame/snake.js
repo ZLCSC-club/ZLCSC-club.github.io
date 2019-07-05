@@ -89,7 +89,8 @@ class Game {
     this.speed          = options.speed || 30
     this.food           = new Array()
     this.snake          = new Snake()
-    this.isStart        = false
+    this.isRunning      = false
+    this.isDead         = true
     this.init()
     this.generateFood()
   }
@@ -102,7 +103,8 @@ class Game {
     this.update()
   }
   start () {
-    this.isStart = true
+    this.isRunning = true
+    this.isDead = false
     this.snake = new Snake()
     $('#gameover').innerText = ''
     $('#gameoverscore').innerText = ''
@@ -110,17 +112,18 @@ class Game {
     $('#pause').style.display = 'inherit'
   }
   pause () {
-    this.isStart = false
+    this.isRunning = false
     $('#pause').style.display = 'none'
     $('#continue').style.display = 'inherit'
   }
   continue () {
-    this.isStart = true
+    this.isRunning = true
     $('#continue').style.display = 'none'
     $('#pause').style.display = 'inherit'
   }
   end () {
-    this.isStart = false
+    this.isRunning = false
+    this.isDead = true
     $('#start').style.display = 'inherit'
     $('#pause').style.display = 'none'
     $('#continue').style.display = 'none'
@@ -185,7 +188,7 @@ class Game {
     }, when)
   }
   update () {
-    if (this.isStart) {
+    if (this.isRunning) {
       this.playSound('A2', -20)
       this.snake.update()
       this.food.forEach((food, i) => {
@@ -221,9 +224,9 @@ var game = new Game()
 
 var isPressed = false;
 window.addEventListener('keydown', (event) => {
-  if (event.key.indexOf('Arrow') > -1) game.snake.setDirection(event.key.replace('Arrow', ''))
-  if (event.code == 'Space' && !isPressed) {
-    if (game.isStart) game.pause()
+  if (event.key.indexOf('Arrow') > -1 && game.isRunning) game.snake.setDirection(event.key.replace('Arrow', ''))
+  if (event.code == 'Space' && !isPressed && !game.isDead) {
+    if (game.isRunning) game.pause()
     else game.continue()
 
     isPressed = true;
